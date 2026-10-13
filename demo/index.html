@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TinkerComplete — test editor</title>
+    <link rel="stylesheet" href="/node_modules/codemirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="/demo/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="/things/demo/editel"
+        ><img
+          src="/dist/icons/48.png"
+          width="28"
+          height="28"
+          alt=""
+        />TinkerComplete</a
+      ><span class="version">LOCAL PREVIEW · v0.1</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">LESS LOOKING UP. MORE MAKING.</p>
+        <h1>Your next line,<br />within reach.</h1>
+        <p class="lead">
+          Arduino suggestions, useful snippets, and just enough documentation.
+          Right where you write.
+        </p>
+        <div class="pills">
+          <span>Works locally</span><span>No AI</span><span>No tracking</span>
+        </div>
+        <div class="exercise">
+          <p class="eyebrow">TRY IT YOURSELF</p>
+          <button data-example="pin">
+            01 <span>Configure a pin</span><code>pin → TAB</code></button
+          ><button data-example="serial">
+            02 <span>Explore Serial</span><code>Serial.</code></button
+          ><button data-example="loop">
+            03 <span>Build a loop</span><code>for → TAB</code></button
+          ><button data-example="servo">
+            04 <span>Control a servo</span><code>arm.</code>
+          </button>
+        </div>
+        <p class="disclaimer">
+          An independent extension for Tinkercad Circuits.<br />This is a local
+          compatibility test, using CodeMirror 4.7.
+        </p>
+      </section>
+      <section class="workspace">
+        <div class="toolbar">
+          <div class="file"><span class="dot"></span>sketch.ino</div>
+          <label
+            >Mode
+            <select id="mode">
+              <option value="text">Text</option>
+              <option value="blocks">Blocks + Text</option>
+              <option value="python">Python (unsupported)</option>
+            </select></label
+          >
+        </div>
+        <div class="js-code_panel__texteditor">
+          <textarea id="code" aria-label="Arduino code"></textarea>
+        </div>
+        <div class="editor-foot">
+          <span id="context">ARDUINO UNO · C++</span
+          ><span>Ctrl + Space to suggest</span>
+        </div>
+        <div class="tip">
+          <kbd>TAB</kbd
+          ><span>Accept a suggestion. Move to the next argument.</span
+          ><kbd>ⓘ</kbd><span>Look a little closer.</span>
+        </div>
+      </section>
+    </main>
+    <script src="/node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="/node_modules/codemirror/mode/clike/clike.js"></script>
+    <script src="/demo/demo.js"></script>
+    <script src="/dist/editor.js"></script>
+  </body>
+</html>
