@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TinkerComplete</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/48.png" alt="" width="32" height="32" />
+      <div>
+        <h1>TinkerComplete</h1>
+        <p>A little help for your next line.</p>
+      </div>
+    </header>
+    <main>
+      <div id="status" role="status">Checking the editor…</div>
+      <label class="switch"
+        ><span
+          ><strong>Code suggestions</strong
+          ><small>Arduino · Text mode</small></span
+        ><input id="enabled" type="checkbox" role="switch" checked
+      /></label>
+      <label class="switch"
+        ><span
+          ><strong>Suggest while typing</strong
+          ><small>Always available with Ctrl + Space</small></span
+        ><input id="auto" type="checkbox" role="switch" checked
+      /></label>
+      <div class="options">
+        <label for="threshold">Start after</label
+        ><select id="threshold">
+          <option value="1">1 character</option>
+          <option value="2" selected>2 characters</option>
+          <option value="3">3 characters</option>
+          <option value="4">4 characters</option>
+        </select>
+      </div>
+      <div class="options">
+        <label for="delay">Typing delay</label
+        ><select id="delay">
+          <option value="0">Instant</option>
+          <option value="120" selected>120 ms</option>
+          <option value="250">250 ms</option>
+          <option value="400">400 ms</option>
+        </select>
+      </div>
+      <section class="keys" aria-label="Keyboard shortcuts">
+        <p><kbd>Tab</kbd><span>Insert suggestion / next argument</span></p>
+        <p><kbd>Shift Tab</kbd><span>Previous argument</span></p>
+        <p><kbd>Ctrl Space</kbd><span>Show suggestions</span></p>
+        <p><kbd>Alt I</kbd><span>Expand documentation</span></p>
+        <p><kbd>Esc</kbd><span>Dismiss / leave template</span></p>
+      </section>
+      <p class="note">
+        If your system uses Ctrl + Space, try Alt + Space. Outside suggestions,
+        TAB keeps its usual indentation.
+      </p>
+    </main>
+    <footer>
+      <span>Local by design. No AI. No tracking.</span
+      ><a href="privacy.html" target="_blank" rel="noopener">Privacy</a>
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>

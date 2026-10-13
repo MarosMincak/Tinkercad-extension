@@ -1,0 +1,25 @@
+{
+  "name": "tinkercomplete",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Arduino code completion for Tinkercad Circuits",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js",
+    "check": "npm test && npm run build && node scripts/check.mjs",
+    "dev": "npm run build && node scripts/serve.mjs",
+    "package": "npm run check && node scripts/package.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@lezer/cpp": "1.1.6"
+  },
+  "devDependencies": {
+    "codemirror": "4.7.0",
+    "esbuild": "0.25.12",
+    "jsdom": "26.1.0",
+    "prettier": "3.9.10"
+  }
+}

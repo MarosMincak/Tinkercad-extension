@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f4f5ed;
+  color: #26382c;
+  font:
+    14px/1.6 system-ui,
+    -apple-system,
+    sans-serif;
+}
+header {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 40px;
+  border-bottom: 1px solid #dce2d4;
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #25452f;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 19px;
+  letter-spacing: -0.6px;
+}
+.version,
+.eyebrow {
+  font:
+    10px/1.4 ui-monospace,
+    monospace;
+  letter-spacing: 0.13em;
+  color: #738369;
+}
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 65px 40px;
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 75px;
+}
+h1 {
+  font-size: 48px;
+  line-height: 1.06;
+  font-weight: 500;
+  letter-spacing: -2.4px;
+  margin: 24px 0;
+}
+.lead {
+  font-size: 15px;
+  color: #73806b;
+  max-width: 290px;
+}
+.pills {
+  display: flex;
+  gap: 13px;
+  color: #6c7c5e;
+  font:
+    10px ui-monospace,
+    monospace;
+  margin: 26px 0 45px;
+}
+.pills span:before {
+  content: "·";
+  margin-right: 6px;
+}
+.exercise button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  border: 0;
+  border-bottom: 1px solid #d9e0ce;
+  background: transparent;
+  color: #89937f;
+  font:
+    11px ui-monospace,
+    monospace;
+  cursor: pointer;
+  text-align: left;
+}
+.exercise button span {
+  flex: 1;
+  color: #33492d;
+  font: 12px system-ui;
+}
+.exercise button code {
+  color: #718564;
+  font-size: 10px;
+}
+.exercise button:hover span {
+  color: #218342;
+}
+.disclaimer {
+  font-size: 10px;
+  color: #8b9481;
+  margin-top: 30px;
+}
+.workspace {
+  min-width: 0;
+  padding-top: 10px;
+}
+.toolbar,
+.editor-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fbfcf8;
+  border: 1px solid #dce2d4;
+  padding: 13px 18px;
+  color: #5a6c50;
+  font:
+    11px ui-monospace,
+    monospace;
+}
+.toolbar {
+  border-radius: 8px 8px 0 0;
+}
+.toolbar label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 10px;
+}
+.toolbar select {
+  border: 0;
+  background: #f0f3e9;
+  color: #61724f;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font: 10px system-ui;
+}
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #668d4e;
+  border-radius: 50%;
+  margin-right: 9px;
+}
+.js-code_panel__texteditor {
+  border-left: 1px solid #dce2d4;
+  border-right: 1px solid #dce2d4;
+}
+.CodeMirror {
+  height: 445px;
+  background: #fff;
+  font:
+    13px/1.8 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+}
+.CodeMirror-lines {
+  padding: 22px 0;
+}
+.CodeMirror-gutters {
+  background: #fcfdf9;
+  border-color: #eff1e9;
+}
+.CodeMirror-linenumber {
+  color: #bcc7b2;
+  padding: 0 13px 0 8px;
+}
+.editor-foot {
+  font-size: 9px;
+  color: #8c987e;
+  border-radius: 0 0 8px 8px;
+}
+.tip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  color: #88937c;
+  padding: 20px 4px;
+}
+.tip kbd {
+  font:
+    10px ui-monospace,
+    monospace;
+  color: #577044;
+}
+.cm-s-default .cm-keyword {
+  color: #7d5d88;
+}
+.cm-s-default .cm-number {
+  color: #b07549;
+}
+.cm-s-default .cm-comment {
+  color: #8e9a85;
+}
+.cm-s-default .cm-variable {
+  color: #35452f;
+}
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 30px;
+    padding: 35px 25px;
+  }
+  h1 {
+    font-size: 39px;
+  }
+  .tip {
+    flex-wrap: wrap;
+  }
+  .exercise button code {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  main {
+    display: block;
+  }
+  .intro h1 br {
+    display: none;
+  }
+  .intro h1 {
+    font-size: 38px;
+  }
+  .lead {
+    max-width: 100%;
+  }
+  .pills {
+    margin-bottom: 20px;
+  }
+  .exercise {
+    display: none;
+  }
+  .disclaimer {
+    display: none;
+  }
+  .workspace {
+    margin-top: 30px;
+  }
+  .CodeMirror {
+    height: 360px;
+  }
+  header {
+    padding: 20px 25px;
+  }
+  .version {
+    display: none;
+  }
+}
